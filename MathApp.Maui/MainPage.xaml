@@ -5,13 +5,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <Grid>
         <Image Aspect="AspectFill" Source="back.jpg" />
         <ScrollView>
             <VerticalStackLayout Padding="10" Spacing="10">
                 <Image
                     Aspect="AspectFit"
-                    HeightRequest="250"
+                    HeightRequest="150"
                     SemanticProperties.Description="custom image"
                     Source="chepan" />
 
@@ -35,13 +43,14 @@
 
                 <Button
                     x:Name="PrimeNumber"
+                    Style="{StaticResource CommonButtonStyle}"
                     Clicked="PrimeNumber_Clicked"
-                    HorizontalOptions="Fill"
                     SemanticProperties.Hint="InputTheNumberToCalculateIfPrime"
                     Text="Проверка за просто число" />
 
                 <Button
                     x:Name="FactorialNumber"
+                    Style="{StaticResource CommonButtonStyle}"
                     Clicked="FactorialNumber_Clicked"
                     HorizontalOptions="Fill"
                     SemanticProperties.Hint="InputTheNumberToCalculateFactorial"

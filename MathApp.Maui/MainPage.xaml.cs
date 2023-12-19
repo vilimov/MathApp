@@ -4,7 +4,7 @@ namespace MathApp.Maui;
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
+    readonly int count = 0;
 
     public MainPage()
     {
@@ -13,7 +13,9 @@ public partial class MainPage : ContentPage
 
     private void OnCounterClicked(object sender, EventArgs e)
     {
-        count++;
+        this.ShowPopup(new PopupPage());
+
+/*        count++;
 
         if (count == 1)
             CounterBtn.Text = $"Clicked {count} time";
@@ -21,7 +23,7 @@ public partial class MainPage : ContentPage
             CounterBtn.Text = $"Clicked {count} times";
         DisplayAlert("Test window", $"Pressed {count} times!", "Ok");
 
-        SemanticScreenReader.Announce(CounterBtn.Text);
+        SemanticScreenReader.Announce(CounterBtn.Text);*/
     }
 
 /*    private void CalculateNumber_Clicked(object sender, EventArgs e)
@@ -80,7 +82,7 @@ public partial class MainPage : ContentPage
 
     }
 
-    private void HandleButtonClicked(object sender, EventArgs e)
+    /*private void HandleButtonClicked(object sender, EventArgs e)
     {
         // Create a popup window
         Popup popup = new Popup();
@@ -138,5 +140,5 @@ public partial class MainPage : ContentPage
                 }
             }
         };
-    }
+    }*/
 }
