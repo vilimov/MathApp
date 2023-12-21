@@ -14,77 +14,88 @@
     </ContentPage.Resources>
 
     <Grid>
-        <Image Aspect="AspectFill" Source="back.jpg" />
+        <Image
+            Aspect="AspectFill"
+            IsOpaque="True"
+            Source="back.img" />
+
         <ScrollView>
-            <VerticalStackLayout Padding="10" Spacing="10">
-                <Image
-                    Aspect="AspectFit"
-                    HeightRequest="150"
-                    SemanticProperties.Description="custom image"
-                    Source="chepan" />
+            <Grid>
+                <StackLayout
+                    Grid.Row="0"
+                    Padding="10"
+                    VerticalOptions="Start">
+                    
+                    <Image
+                        Aspect="AspectFit"
+                        HeightRequest="60"
+                        SemanticProperties.Description="custom image"
+                        Source="dotnetmaui"
+                        VerticalOptions="Start" />
+                </StackLayout>
 
-                <!--<Frame
-                    Padding="5"
-                    BackgroundColor="BlanchedAlmond"
-                    CornerRadius="10">
+                <StackLayout
+                    Grid.Row="1"
+                    Padding="10"
+                    Spacing="10"
+                    VerticalOptions="Center">
+                    
+                    <Button
+                        x:Name="PrimeNumber"
+                        Clicked="PrimeNumber_Clicked"
+                        SemanticProperties.Hint="InputTheNumberToCalculateIfPrime"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="Проверка за просто число" />
 
-                    <HorizontalStackLayout Spacing="10">
-                        <Label Text="Въведете число:" VerticalOptions="Center" />
-                        <Entry TextChanged="Entry_TextChanged" VerticalOptions="Center" />
-                        <Button
-                            x:Name="CalculateNumber"
-                            Clicked="CalculateNumber_Clicked"
-                            HorizontalOptions="Center"
-                            SemanticProperties.Hint="Calculates factorial of input number and if prime"
-                            Text="Пресметни" />
+                    <Button
+                        x:Name="FactorialNumber"
+                        Clicked="FactorialNumber_Clicked"
+                        SemanticProperties.Hint="InputTheNumberToCalculateFactorial"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="Пресмятане на факториел на число" />
 
-                    </HorizontalStackLayout>
-                </Frame>-->
+                    <Button
+                        x:Name="NOK"
+                        Clicked="NOK_Clicked"
+                        SemanticProperties.Hint="InputNumbersToCalculateNOK"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="Пресмятане на НОК" />
 
-                <Button
-                    x:Name="PrimeNumber"
-                    Style="{StaticResource CommonButtonStyle}"
-                    Clicked="PrimeNumber_Clicked"
-                    SemanticProperties.Hint="InputTheNumberToCalculateIfPrime"
-                    Text="Проверка за просто число" />
+                    <Button
+                        x:Name="NOD"
+                        Clicked="NOD_Clicked"
+                        SemanticProperties.Hint="InputNumbersToCalculateNOD"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="Пресмятане на НОД" />
 
-                <Button
-                    x:Name="FactorialNumber"
-                    Style="{StaticResource CommonButtonStyle}"
-                    Clicked="FactorialNumber_Clicked"
-                    HorizontalOptions="Fill"
-                    SemanticProperties.Hint="InputTheNumberToCalculateFactorial"
-                    Text="Пресмятане на факториел на число" />
+                    <Button
+                        x:Name="CounterBtn"
+                        Clicked="OnCounterClicked"
+                        SemanticProperties.Hint="Counts the number of times you click"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="Click me" />
 
-                <Button
-                    x:Name="NOK"
-                    Clicked="NOK_Clicked"
-                    HorizontalOptions="Fill"
-                    SemanticProperties.Hint="InputNumbersToCalculateNOK"
-                    Text="Пресмятане на НОК" />
+                    <Button
+                        x:Name="TestButton"
+                        Clicked="TestButton_Clicked"
+                        SemanticProperties.Hint=""
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="Test me" />
+                </StackLayout>
+                
+                <StackLayout
+                    Grid.Row="2"
+                    Padding="10"
+                    VerticalOptions="End">
+                    <Button
+                        x:Name="About"
+                        Clicked="About_Clicked"
+                        SemanticProperties.Hint="About the app"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="За приложението" />
+                </StackLayout>
 
-                <Button
-                    x:Name="NOD"
-                    Clicked="NOD_Clicked"
-                    HorizontalOptions="Fill"
-                    SemanticProperties.Hint="InputNumbersToCalculateNOD"
-                    Text="Пресмятане на НОД" />
-
-
-                <!--<Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />-->
-
-                <Button
-                    x:Name="CounterBtn"
-                    Clicked="OnCounterClicked"
-                    HorizontalOptions="Fill"
-                    SemanticProperties.Hint="Counts the number of times you click"
-                    Text="Click me" />
-            </VerticalStackLayout>
+            </Grid>
         </ScrollView>
     </Grid>
-
 </ContentPage>

@@ -2,13 +2,13 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Style x:Key="CommonButtonStyle" TargetType="Button">
-        <Setter Property="HorizontalOptions" Value="Fill" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
         <Setter Property="TextTransform" Value="Uppercase" />
-        <Setter Property="TextColor" Value="Red" />
+        <Setter Property="TextColor" Value="Firebrick" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="BorderColor" Value="Black" />
         <Setter Property="BorderWidth" Value="3" />
-        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BackgroundColor" Value="OldLace" />
     </Style>
 
 </ResourceDictionary>
