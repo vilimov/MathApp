@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using epj.RouteGenerator;
 
 namespace MathApp.Maui
 {
+    [AutoRoutes("Page")]
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()

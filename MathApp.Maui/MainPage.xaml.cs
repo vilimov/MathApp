@@ -33,6 +33,6 @@ public partial class MainPage : ContentPage
 
     private void About_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("AboutPage");
+        Shell.Current.GoToAsync(Routes.AboutPage);
     }
 }
