@@ -17,7 +17,7 @@
         <Image
             Aspect="AspectFill"
             IsOpaque="True"
-            Source="back.img" />
+            Source="backfont.jpg" />
 
         <ScrollView>
             <Grid>
@@ -25,12 +25,12 @@
                     Grid.Row="0"
                     Padding="10"
                     VerticalOptions="Start">
-                    
+
                     <Image
                         Aspect="AspectFit"
                         HeightRequest="60"
-                        SemanticProperties.Description="custom image"
-                        Source="dotnetmaui"
+                        SemanticProperties.Description=".Net Maui Logo"
+                        Source="dotnetmauilogo.png"
                         VerticalOptions="Start" />
                 </StackLayout>
 
@@ -39,7 +39,7 @@
                     Padding="10"
                     Spacing="10"
                     VerticalOptions="Center">
-                    
+
                     <Button
                         x:Name="PrimeNumber"
                         Clicked="PrimeNumber_Clicked"
@@ -68,21 +68,8 @@
                         Style="{StaticResource CommonButtonStyle}"
                         Text="Пресмятане на НОД" />
 
-                    <Button
-                        x:Name="CounterBtn"
-                        Clicked="OnCounterClicked"
-                        SemanticProperties.Hint="Counts the number of times you click"
-                        Style="{StaticResource CommonButtonStyle}"
-                        Text="Click me" />
-
-                    <Button
-                        x:Name="TestButton"
-                        Clicked="TestButton_Clicked"
-                        SemanticProperties.Hint=""
-                        Style="{StaticResource CommonButtonStyle}"
-                        Text="Test me" />
                 </StackLayout>
-                
+
                 <StackLayout
                     Grid.Row="2"
                     Padding="10"

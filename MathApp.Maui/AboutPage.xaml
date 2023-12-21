@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MathApp.Maui.AboutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="AboutPage">
+    <Grid>
+        <Image
+            Aspect="AspectFill"
+            IsOpaque="True"
+            Source="backfont.jpg" />
+        <StackLayout
+            Padding="10"
+            VerticalOptions="Start">
+
+            <Image
+                HeightRequest="60"
+                SemanticProperties.Description=".Net Maui Logo"
+                Source="dotnetmauilogo.png"
+                VerticalOptions="Start" />
+            <Label
+                HorizontalOptions="Center"
+                Text="За приложението"
+                VerticalOptions="Center" />
+            <Button
+                x:Name="MainPage"
+                Clicked="MainPage_Clicked"
+                SemanticProperties.Hint="ReturnToMainPage"
+                Style="{StaticResource CommonButtonStyle}"
+                Text="Назад" />
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
