@@ -55,16 +55,16 @@
                         Text="Пресмятане на факториел на число" />
 
                     <Button
-                        x:Name="NOK"
-                        Clicked="NOK_Clicked"
-                        SemanticProperties.Hint="InputNumbersToCalculateNOK"
+                        x:Name="LCM"
+                        Clicked="LCM_Clicked"
+                        SemanticProperties.Hint="InputNumbersToCalculateLCM"
                         Style="{StaticResource CommonButtonStyle}"
                         Text="Пресмятане на НОК" />
 
                     <Button
-                        x:Name="NOD"
-                        Clicked="NOD_Clicked"
-                        SemanticProperties.Hint="InputNumbersToCalculateNOD"
+                        x:Name="GCD"
+                        Clicked="GCD_Clicked"
+                        SemanticProperties.Hint="InputNumbersToCalculateGCD"
                         Style="{StaticResource CommonButtonStyle}"
                         Text="Пресмятане на НОД" />
 

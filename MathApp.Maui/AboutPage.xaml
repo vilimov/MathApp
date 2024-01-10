@@ -10,10 +10,11 @@
             Aspect="AspectFill"
             IsOpaque="True"
             Source="backfont.jpg" />
-        <StackLayout
-            Padding="10"
-            VerticalOptions="Start">
 
+        <StackLayout 
+            Padding="10" 
+            Spacing="20"
+            VerticalOptions="FillAndExpand">
             <Image
                 HeightRequest="60"
                 SemanticProperties.Description=".Net Maui Logo"
@@ -29,7 +30,14 @@
                 SemanticProperties.Hint="ReturnToMainPage"
                 Style="{StaticResource CommonButtonStyle}"
                 Text="Назад" />
-        </StackLayout>
+            <Button
+                x:Name="END"
+                VerticalOptions="EndAndExpand"
+                Clicked="MainPage_Clicked"
+                SemanticProperties.Hint="ReturnToMainPage"
+                Style="{StaticResource CommonButtonStyle}"
+                Text="Dolu" />
 
+        </StackLayout>
     </Grid>
 </ContentPage>

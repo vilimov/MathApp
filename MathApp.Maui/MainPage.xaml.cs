@@ -21,12 +21,12 @@ public partial class MainPage : ContentPage
         this.ShowPopup(new PopupPage());
     }
 
-    private void NOK_Clicked(object sender, EventArgs e)
+    private void LCM_Clicked(object sender, EventArgs e)
     {
 
     }
 
-    private void NOD_Clicked(object sender, EventArgs e)
+    private void GCD_Clicked(object sender, EventArgs e)
     {
 
     }
