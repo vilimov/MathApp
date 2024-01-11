@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
 using epj.RouteGenerator;
+using Mopups.Hosting;
 
 namespace MathApp.Maui
 {
@@ -12,6 +13,7 @@ namespace MathApp.Maui
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigureMopups()
                 .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {

@@ -1,20 +1,19 @@
-﻿using MathApp.Maui.Exceptions;
-using MathApp.Maui.Exceptions.ExceptionMessages;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace MathApp.Maui.Shared;
 
 class Factorial
 {
-    public BigInteger CalculateFactorial(string inputNumber)
+    public static string CalculateFactorial(int inputNumber)
     {
-        BigInteger factorial = BigInteger.Zero;
-        int input = 0;
+        BigInteger result = 1;
 
-        if (!int.TryParse(inputNumber, out input)) 
+        for (int i = 1; i <= inputNumber; i++)
         {
-            throw new InvalidInputTypeException(ExceptionMessages.invalidInput);
+            result *= i;
         }
-        return factorial;
+
+        string resultAsString = result.ToString();
+        return resultAsString;
     }
 }

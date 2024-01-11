@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui.Views;
+using Mopups.Services;
 
 namespace MathApp.Maui;
 
@@ -23,7 +24,7 @@ public partial class MainPage : ContentPage
 
     private void LCM_Clicked(object sender, EventArgs e)
     {
-
+        MopupService.Instance.PushAsync(new MopupPage());
     }
 
     private void GCD_Clicked(object sender, EventArgs e)

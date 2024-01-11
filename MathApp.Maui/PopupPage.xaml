@@ -3,23 +3,31 @@
     x:Class="MathApp.Maui.PopupPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     CanBeDismissedByTappingOutsideOfPopup="False"
     Size="200, 150"
     Color="Transparent">
 
     <Border Padding="0">
         <Border.StrokeShape>
-            <RoundRectangle CornerRadius="25" />
+            <RoundRectangle CornerRadius="15, 15, 15, 15" />
         </Border.StrokeShape>
         <StackLayout
             Padding="10"
-            BackgroundColor="BlanchedAlmond"
             Spacing="10"
             VerticalOptions="Center">
-            <Label Text="Въведете число:" />
+            <Label FontAttributes="Bold" Text="Въведете число:" />
             <Entry x:Name="NumberEntry" />
-            <Button Clicked="Button_Clicked" Text="Пресметни" />
+            <Button
+                Clicked="Button_Clicked"
+                FontAttributes="Bold"
+                Text="Пресметни" />
+            <StackLayout.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Offset="0" Color="BlanchedAlmond" />
+                    <GradientStop Offset="1" Color="Orange" />
+                </LinearGradientBrush>
+            </StackLayout.Background>
         </StackLayout>
     </Border>
 </mct:Popup>
