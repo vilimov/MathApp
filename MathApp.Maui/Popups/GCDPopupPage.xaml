@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    x:Class="MathApp.Maui.Popups.GCDPopupPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopanime="clr-namespace:Mopups.Animations;assembly=Mopups"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    Title="GCDPopupPage"
+    BackgroundColor="#80000000"
+    CloseWhenBackgroundIsClicked="False">
+    <mopups:PopupPage.Animation>
+        <mopanime:ScaleAnimation
+            DurationIn="700"
+            EasingIn="BounceOut"
+            PositionIn="Bottom"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7" />
+    </mopups:PopupPage.Animation>
+    <VerticalStackLayout
+        MinimumHeightRequest="300"
+        VerticalOptions="CenterAndExpand"
+        WidthRequest="200">
+        <Border Padding="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15, 15, 15, 15" />
+            </Border.StrokeShape>
+            <StackLayout
+                Padding="10"
+                Spacing="10"
+                VerticalOptions="Center">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Въведете поне две числа, за да пресметнем техният най-голям общ делител:"
+                    TextColor="SaddleBrown" />
+                <Entry x:Name="NumberEntry" />
+                <Button
+                    BackgroundColor="DarkGoldenrod"
+                    BorderColor="SaddleBrown"
+                    BorderWidth="2"
+                    Clicked="AddNumber"
+                    FontAttributes="Bold"
+                    Text="Добави число"
+                    TextColor="AntiqueWhite" />
+                <Button
+                    BackgroundColor="DarkGreen"
+                    BorderColor="SaddleBrown"
+                    BorderWidth="2"
+                    Clicked="Calculate"
+                    FontAttributes="Bold"
+                    Text="Пресметни"
+                    TextColor="AntiqueWhite" />
+                <Button
+                    BackgroundColor="DarkOrange"
+                    BorderColor="SaddleBrown"
+                    BorderWidth="2"
+                    Clicked="Reset"
+                    FontAttributes="Bold"
+                    Text="Изчисти"
+                    TextColor="AntiqueWhite" />
+                <Line />
+                <Button
+                    BackgroundColor="OrangeRed"
+                    BorderColor="SaddleBrown"
+                    BorderWidth="2"
+                    Clicked="Close"
+                    FontAttributes="Bold"
+                    Text="Затвори"
+                    TextColor="AntiqueWhite" />
+                <StackLayout.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Offset="0" Color="BlanchedAlmond" />
+                        <GradientStop Offset="1" Color="Orange" />
+                    </LinearGradientBrush>
+                </StackLayout.Background>
+            </StackLayout>
+        </Border>
+    </VerticalStackLayout>
+</mopups:PopupPage>

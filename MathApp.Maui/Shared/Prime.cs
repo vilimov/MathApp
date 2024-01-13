@@ -8,9 +8,9 @@ namespace MathApp.Maui.Shared;
 
 class Prime
 {
-    public static int VerifyIfPrime(int input) 
+    public static List<int> VerifyIfPrime(int input) 
     {
-        int result = 0;
+        List<int> result = new List<int>();
         return result;
     }
 }
