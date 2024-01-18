@@ -17,6 +17,7 @@ public partial class FactorialPopupPage
     {
         int entry = Convert.ToInt32(NumberEntry.Text);
         string result = Factorial.CalculateFactorial(entry).ToString();
+        MopupService.Instance.PushAsync(new ResultPopupPage(), animate:true);
     }
 
     private void CloseButton(object sender, EventArgs e)

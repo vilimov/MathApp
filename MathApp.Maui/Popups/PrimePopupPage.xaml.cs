@@ -13,7 +13,7 @@ public partial class PrimePopupPage
 
     private void Calculate(object sender, EventArgs e)
     {
-
+        MopupService.Instance.PushAsync(new ResultPopupPage());
     }
 
     private void Close(object sender, EventArgs e)

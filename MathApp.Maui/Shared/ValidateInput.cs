@@ -1,9 +1,22 @@
 ﻿namespace MathApp.Maui.Shared
 {
-    class ValidateInput
+    static class ValidateInput
     {
-        string input = String.Empty;
+        static string input = String.Empty;
 
+        public static int ValidatePositiveInteger(string? input) 
+        {
+            int result = 0;
 
+            try
+            {
+                int.TryParse(input, out result);
+            }
+            catch (Exception)
+            {
+                
+            }
+            return result;
+        }
     }
 }
