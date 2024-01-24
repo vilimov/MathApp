@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-
     <Style x:Key="CommonButtonStyle" TargetType="Button">
         <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
         <Setter Property="TextTransform" Value="Uppercase" />
@@ -10,5 +9,16 @@
         <Setter Property="BorderWidth" Value="3" />
         <Setter Property="BackgroundColor" Value="OldLace" />
     </Style>
-
+    <Style x:Key="GoToMainPageButton" TargetType="Button">
+        <Setter Property="VerticalOptions" Value="EndAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="SemanticProperties.Hint" Value="ReturnToMainPage" />
+        <Setter Property="Text" Value="Към началната страница" />
+        <Setter Property="TextTransform" Value="Uppercase" />
+        <Setter Property="TextColor" Value="Firebrick" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BorderColor" Value="Black" />
+        <Setter Property="BorderWidth" Value="3" />
+        <Setter Property="BackgroundColor" Value="OldLace" />
+    </Style>
 </ResourceDictionary>

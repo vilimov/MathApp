@@ -68,6 +68,13 @@
                         Style="{StaticResource CommonButtonStyle}"
                         Text="Пресмятане на НОД" />
 
+                    <Button
+                        x:Name="PrimePage"
+                        Clicked="PrimePage_Clicked"
+                        SemanticProperties.Hint="Go to PrimePage"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Text="Проверка за просто число" />
+
                 </StackLayout>
 
                 <StackLayout

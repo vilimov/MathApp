@@ -8,9 +8,16 @@ namespace MathApp.Maui.Shared;
 
 class Prime
 {
-    public static List<int> VerifyIfPrime(int input) 
+    public static bool IsPrime(int input) 
     {
-        List<int> result = new List<int>();
-        return result;
+        for (int i = 2; i <= Math.Sqrt(input); i++) 
+        {
+            if (input % i == 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MathApp.Maui.Pages.PrimePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Към началната страница">
+    <Grid>
+        <Image
+            Aspect="AspectFill"
+            IsOpaque="True"
+            Source="backfont.jpg" />
+        <StackLayout
+            Padding="10"
+            Spacing="20"
+            VerticalOptions="FillAndExpand">
+            <Border
+                Padding="0"
+                HeightRequest="300"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="250">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15, 15, 15, 15" />
+                </Border.StrokeShape>
+                <StackLayout
+                    Padding="10"
+                    Spacing="10"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Offset="0" Color="BlanchedAlmond" />
+                            <GradientStop Offset="1" Color="Orange" />
+                        </LinearGradientBrush>
+                    </StackLayout.Background>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Въведете цяло положително число, за да проверим дали е просто:"
+                        TextColor="SaddleBrown" />
+                    <Entry x:Name="NumberEntry" />
+                    <Button
+                        BackgroundColor="DarkGreen"
+                        BorderColor="SaddleBrown"
+                        BorderWidth="2"
+                        Clicked="Calculate"
+                        FontAttributes="Bold"
+                        Text="Провери"
+                        TextColor="AntiqueWhite" />
+                    <Line />
+                    <Button
+                        BackgroundColor="DarkOrange"
+                        BorderColor="SaddleBrown"
+                        BorderWidth="2"
+                        Clicked="Reset"
+                        FontAttributes="Bold"
+                        Text="Изчисти"
+                        TextColor="AntiqueWhite" />
+                    <Label
+                        x:Name="PrimeResult"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        Text="" />
+                </StackLayout>
+            </Border>
+            <Button Clicked="MainPage_Clicked" Style="{StaticResource GoToMainPageButton}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

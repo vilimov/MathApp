@@ -2,21 +2,22 @@
 {
     static class ValidateInput
     {
-        static string input = String.Empty;
-
-        public static int ValidatePositiveInteger(string? input) 
+        public static int IsPositiveInteger(string input)
         {
             int result = 0;
-
-            try
-            {
-                int.TryParse(input, out result);
-            }
-            catch (Exception)
-            {
-                
-            }
             return result;
+        }
+
+        public static bool IsPositiveInt(int number)
+        {
+            if (number > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

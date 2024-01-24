@@ -3,7 +3,8 @@
     x:Class="MathApp.Maui.AboutPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="За приложението">
+    Title="За приложението"
+    Rotation="0">
 
     <Grid>
         <Image
@@ -18,26 +19,23 @@
             <Image
                 HeightRequest="60"
                 SemanticProperties.Description=".Net Maui Logo"
-                Source="dotnetmauilogo.png"
+                Source="dotnetMainPage_Clicked"
                 VerticalOptions="Start" />
             <Label
                 HorizontalOptions="Center"
                 Text="За приложението"
                 VerticalOptions="Center" />
+            <Label
+                HorizontalOptions="Center"
+                Text="За автора"
+                VerticalOptions="Center" />
             <Button
                 x:Name="MainPage"
-                Clicked="MainPage_Clicked"
-                SemanticProperties.Hint="ReturnToMainPage"
-                Style="{StaticResource CommonButtonStyle}"
-                Text="Назад" />
-            <Button
-                x:Name="END"
                 VerticalOptions="EndAndExpand"
                 Clicked="MainPage_Clicked"
                 SemanticProperties.Hint="ReturnToMainPage"
-                Style="{StaticResource CommonButtonStyle}"
-                Text="Dolu" />
-
+                Style="{StaticResource GoToMainPageButton}"
+                Text="Към началната страница" />
         </StackLayout>
     </Grid>
 </ContentPage>

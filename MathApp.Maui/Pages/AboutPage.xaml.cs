@@ -11,6 +11,6 @@ public partial class AboutPage : ContentPage
 
     private void MainPage_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(Routes.MainPage);
+        Shell.Current.GoToAsync("..");
     }
 }

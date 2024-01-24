@@ -6,8 +6,6 @@ namespace MathApp.Maui;
 
 public partial class MainPage : ContentPage
 {
-    //readonly int count = 0;
-
     public MainPage()
     {
         InitializeComponent();
@@ -31,6 +29,11 @@ public partial class MainPage : ContentPage
     private void GCD_Clicked(object sender, EventArgs e)
     {
         MopupService.Instance.PushAsync(new GCDPopupPage());
+    }
+
+    private void PrimePage_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(Routes.PrimePage);
     }
 
     private void About_Clicked(object sender, EventArgs e)

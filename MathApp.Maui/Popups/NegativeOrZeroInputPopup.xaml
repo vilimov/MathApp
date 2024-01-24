@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    x:Class="MathApp.Maui.Popups.NegativeOrZeroInputPopup"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopanime="clr-namespace:Mopups.Animations;assembly=Mopups"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    Title="NegativeOrZeroInputPopup"
+    BackgroundColor="#80000000"
+    CloseWhenBackgroundIsClicked="False">
+    <mopups:PopupPage.Animation>
+        <mopanime:ScaleAnimation
+            DurationIn="700"
+            EasingIn="BounceOut"
+            PositionIn="Top"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7" />
+    </mopups:PopupPage.Animation>
+    <ScrollView>
+        <VerticalStackLayout
+            HeightRequest="400"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="200">
+            <Border Padding="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15, 15, 15, 15" />
+                </Border.StrokeShape>
+                <StackLayout
+                    Padding="10"
+                    Spacing="10"
+                    VerticalOptions="Center">
+                    <Image Source="attention" 
+                        Aspect="AspectFit"
+                        HeightRequest="50"
+                        SemanticProperties.Description="Attention sign"
+                        VerticalOptions="Start"/>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Вие въведохте отрицателно число или 0. Моля, въведете цяло положително число!"
+                        TextColor="SaddleBrown" />
+                    <Button
+                        BackgroundColor="OrangeRed"
+                        BorderColor="SaddleBrown"
+                        BorderWidth="2"
+                        Clicked="Close"
+                        FontAttributes="Bold"
+                        Text="Затвори"
+                        TextColor="AntiqueWhite" />
+                    <StackLayout.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Offset="0" Color="BlanchedAlmond" />
+                            <GradientStop Offset="1" Color="Orange" />
+                        </LinearGradientBrush>
+                    </StackLayout.Background>
+                </StackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</mopups:PopupPage>
