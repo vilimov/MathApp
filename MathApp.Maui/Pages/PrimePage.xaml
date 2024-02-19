@@ -10,13 +10,14 @@
             IsOpaque="True"
             Source="backfont.jpg" />
         <StackLayout
-            Padding="10"
+            Padding="50"
             Spacing="20"
             VerticalOptions="FillAndExpand">
+            <StackLayout>
             <Border
                 Padding="0"
                 HeightRequest="300"
-                VerticalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand"
                 WidthRequest="250">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="15, 15, 15, 15" />
@@ -60,7 +61,9 @@
                         Text="" />
                 </StackLayout>
             </Border>
-            <Button Clicked="MainPage_Clicked" Style="{StaticResource GoToMainPageButton}" />
+                <Button
+                    Clicked="MainPage_Clicked" Style="{StaticResource GoToMainPageButton}" />
+            </StackLayout>
         </StackLayout>
     </Grid>
 </ContentPage>

@@ -58,6 +58,11 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\Attention.png" />
+	  <None Remove="Resources\Images\cancel.png" />
+	  <None Remove="Resources\Images\fail.jpg" />
+	  <None Remove="Resources\Images\important.png" />
+	  <None Remove="Resources\Images\no-symbol.png" />
+	  <None Remove="Resources\Images\target.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -100,6 +105,18 @@
 	  <MauiXaml Update="Resources\Styles\ButtonStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Images.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\pixabay\attention.png" />
+	  <MauiImage Include="Resources\Images\pixabay\cancel.png" />
+	  <MauiImage Include="Resources\Images\pixabay\fail.jpg" />
+	  <MauiImage Include="Resources\Images\pixabay\important.png" />
+	  <MauiImage Include="Resources\Images\pixabay\no_symbol.png" />
+	  <MauiImage Include="Resources\Images\pixabay\target.png" />
 	</ItemGroup>
 
 </Project>

@@ -32,6 +32,7 @@
                     VerticalOptions="Center">
                     <Label
                         FontAttributes="Bold"
+                        HorizontalOptions="Center"
                         Text="Вие въведохте невалидно число! Моля, въведете цяло положително число!"
                         TextColor="SaddleBrown" />
                     <Button

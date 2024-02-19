@@ -27,11 +27,13 @@ public partial class PrimePage : ContentPage
             }
             else
             {
+                ResetInput();
                 MopupService.Instance.PushAsync(new NegativeOrZeroInputPopup());
             }
         }
         catch (Exception)
         {
+            ResetInput();
             MopupService.Instance.PushAsync(new InvalidInputPopup());
         }
 
@@ -42,6 +44,11 @@ public partial class PrimePage : ContentPage
     }
 
     private void Reset(object sender, EventArgs e)
+    {
+        ResetInput();
+    }
+
+    private void ResetInput()
     {
         NumberEntry.Text = "";
         PrimeResult.Text = "";

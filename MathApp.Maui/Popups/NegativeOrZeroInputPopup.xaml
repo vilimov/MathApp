@@ -37,6 +37,7 @@
                         VerticalOptions="Start"/>
                     <Label
                         FontAttributes="Bold"
+                        HorizontalOptions="Center"
                         Text="Вие въведохте отрицателно число или 0. Моля, въведете цяло положително число!"
                         TextColor="SaddleBrown" />
                     <Button
